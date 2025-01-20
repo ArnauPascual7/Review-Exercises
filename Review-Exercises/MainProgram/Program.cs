@@ -5,7 +5,13 @@ namespace MainProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            const string Msg = "Introdueix un codi postal:";
+            const string MsgIsPostalCode = "És un codi postal";
+            const string MsgNotPostalCode = "No és un coid postal";
+
+            Console.WriteLine(Msg);
+
+            Console.WriteLine(MyLibrary.Math.CheckPostalCode(Console.ReadLine()) ? MsgIsPostalCode : MsgNotPostalCode);
         }
     }
 }
